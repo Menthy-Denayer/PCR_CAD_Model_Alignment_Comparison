@@ -1,6 +1,7 @@
 {
      "name": "Range_Hood",
      "scan": 7,
+     "bounding_box": 1.8,
      "transformation": [
           [
                [

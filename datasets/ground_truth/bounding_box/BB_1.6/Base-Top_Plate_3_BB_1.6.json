@@ -1,6 +1,7 @@
 {
      "name": "Base-Top_Plate",
      "scan": 3,
+     "bounding_box": 1.6,
      "transformation": [
           [
                [

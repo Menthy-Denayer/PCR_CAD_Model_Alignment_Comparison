@@ -1,6 +1,7 @@
 {
      "name": "Guitar",
      "scan": 1,
+     "bounding_box": 0,
      "transformation": [
           [
                [

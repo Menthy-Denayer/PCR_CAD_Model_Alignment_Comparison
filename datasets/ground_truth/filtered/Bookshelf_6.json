@@ -1,6 +1,7 @@
 {
      "name": "Bookshelf",
      "scan": 6,
+     "bounding_box": 0,
      "transformation": [
           [
                [

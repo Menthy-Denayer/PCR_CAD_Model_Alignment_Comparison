@@ -1,6 +1,7 @@
 {
      "name": "Square-Peg",
      "scan": 4,
+     "bounding_box": 0,
      "transformation": [
           [
                [

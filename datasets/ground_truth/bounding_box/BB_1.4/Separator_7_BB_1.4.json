@@ -1,6 +1,7 @@
 {
      "name": "Separator",
      "scan": 7,
+     "bounding_box": 1.4,
      "transformation": [
           [
                [

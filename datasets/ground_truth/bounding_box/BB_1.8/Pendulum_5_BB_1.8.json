@@ -1,6 +1,7 @@
 {
      "name": "Pendulum",
      "scan": 5,
+     "bounding_box": 1.8,
      "transformation": [
           [
                [
