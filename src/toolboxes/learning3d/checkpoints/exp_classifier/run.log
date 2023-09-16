@@ -1,0 +1,141 @@
+Namespace(exp_name='exp_classifier', dataset_path='ModelNet40', eval=False, dataset_type='modelnet', num_points=1024, pointnet='tune', emb_dims=1024, symfn='max', seed=1234, workers=4, batch_size=32, epochs=200, start_epoch=0, optimizer='Adam', resume='', pretrained='', device='cuda:0')
+EPOCH:: 1, Traininig Loss: 1.986759, Testing Loss: 1.929140, Best Loss: 1.929140
+EPOCH:: 1, Traininig Accuracy: 0.253268, Testing Accuracy: 0.207317
+EPOCH:: 2, Traininig Loss: 1.586629, Testing Loss: 1.611956, Best Loss: 1.611956
+EPOCH:: 2, Traininig Accuracy: 0.338644, Testing Accuracy: 0.350407
+EPOCH:: 3, Traininig Loss: 1.470029, Testing Loss: 1.615672, Best Loss: 1.611956
+EPOCH:: 3, Traininig Accuracy: 0.385008, Testing Accuracy: 0.231707
+EPOCH:: 4, Traininig Loss: 1.416947, Testing Loss: 1.550103, Best Loss: 1.550103
+EPOCH:: 4, Traininig Accuracy: 0.408088, Testing Accuracy: 0.294309
+EPOCH:: 5, Traininig Loss: 1.373397, Testing Loss: 1.511334, Best Loss: 1.511334
+EPOCH:: 5, Traininig Accuracy: 0.422181, Testing Accuracy: 0.354472
+EPOCH:: 6, Traininig Loss: 1.370580, Testing Loss: 2.018268, Best Loss: 1.511334
+EPOCH:: 6, Traininig Accuracy: 0.418913, Testing Accuracy: 0.169919
+EPOCH:: 7, Traininig Loss: 1.354121, Testing Loss: 1.683632, Best Loss: 1.511334
+EPOCH:: 7, Traininig Accuracy: 0.429330, Testing Accuracy: 0.187805
+EPOCH:: 8, Traininig Loss: 1.310638, Testing Loss: 1.854562, Best Loss: 1.511334
+EPOCH:: 8, Traininig Accuracy: 0.444444, Testing Accuracy: 0.200000
+EPOCH:: 9, Traininig Loss: 1.285878, Testing Loss: 1.508638, Best Loss: 1.508638
+EPOCH:: 9, Traininig Accuracy: 0.448325, Testing Accuracy: 0.289431
+EPOCH:: 10, Traininig Loss: 1.290941, Testing Loss: 1.546283, Best Loss: 1.508638
+EPOCH:: 10, Traininig Accuracy: 0.449551, Testing Accuracy: 0.339024
+EPOCH:: 11, Traininig Loss: 1.267931, Testing Loss: 1.480694, Best Loss: 1.480694
+EPOCH:: 11, Traininig Accuracy: 0.464052, Testing Accuracy: 0.291870
+EPOCH:: 12, Traininig Loss: 1.261636, Testing Loss: 1.680206, Best Loss: 1.480694
+EPOCH:: 12, Traininig Accuracy: 0.472426, Testing Accuracy: 0.220325
+EPOCH:: 13, Traininig Loss: 1.242885, Testing Loss: 2.358723, Best Loss: 1.480694
+EPOCH:: 13, Traininig Accuracy: 0.470588, Testing Accuracy: 0.182927
+EPOCH:: 14, Traininig Loss: 1.244163, Testing Loss: 1.452432, Best Loss: 1.452432
+EPOCH:: 14, Traininig Accuracy: 0.464665, Testing Accuracy: 0.275610
+EPOCH:: 15, Traininig Loss: 1.227082, Testing Loss: 1.342469, Best Loss: 1.342469
+EPOCH:: 15, Traininig Accuracy: 0.482435, Testing Accuracy: 0.369106
+EPOCH:: 16, Traininig Loss: 1.217390, Testing Loss: 1.839453, Best Loss: 1.342469
+EPOCH:: 16, Traininig Accuracy: 0.479575, Testing Accuracy: 0.230894
+EPOCH:: 17, Traininig Loss: 1.166663, Testing Loss: 1.757243, Best Loss: 1.342469
+EPOCH:: 17, Traininig Accuracy: 0.503676, Testing Accuracy: 0.230081
+EPOCH:: 18, Traininig Loss: 1.207446, Testing Loss: 1.366403, Best Loss: 1.342469
+EPOCH:: 18, Traininig Accuracy: 0.489992, Testing Accuracy: 0.387805
+EPOCH:: 19, Traininig Loss: 1.177589, Testing Loss: 1.914721, Best Loss: 1.342469
+EPOCH:: 19, Traininig Accuracy: 0.501838, Testing Accuracy: 0.236585
+EPOCH:: 20, Traininig Loss: 1.161909, Testing Loss: 1.408325, Best Loss: 1.342469
+EPOCH:: 20, Traininig Accuracy: 0.504902, Testing Accuracy: 0.304878
+EPOCH:: 21, Traininig Loss: 1.141877, Testing Loss: 1.379360, Best Loss: 1.342469
+EPOCH:: 21, Traininig Accuracy: 0.517157, Testing Accuracy: 0.415447
+EPOCH:: 22, Traininig Loss: 1.147320, Testing Loss: 1.233031, Best Loss: 1.233031
+EPOCH:: 22, Traininig Accuracy: 0.510621, Testing Accuracy: 0.504878
+EPOCH:: 23, Traininig Loss: 1.157162, Testing Loss: 1.526220, Best Loss: 1.233031
+EPOCH:: 23, Traininig Accuracy: 0.513276, Testing Accuracy: 0.343902
+EPOCH:: 24, Traininig Loss: 1.145351, Testing Loss: 1.207349, Best Loss: 1.207349
+EPOCH:: 24, Traininig Accuracy: 0.512663, Testing Accuracy: 0.404878
+EPOCH:: 25, Traininig Loss: 1.140173, Testing Loss: 1.179109, Best Loss: 1.179109
+EPOCH:: 25, Traininig Accuracy: 0.521650, Testing Accuracy: 0.480488
+EPOCH:: 26, Traininig Loss: 1.098793, Testing Loss: 1.473411, Best Loss: 1.179109
+EPOCH:: 26, Traininig Accuracy: 0.538807, Testing Accuracy: 0.326829
+EPOCH:: 27, Traininig Loss: 1.116225, Testing Loss: 1.147211, Best Loss: 1.147211
+EPOCH:: 27, Traininig Accuracy: 0.526552, Testing Accuracy: 0.517073
+EPOCH:: 28, Traininig Loss: 1.091763, Testing Loss: 1.887763, Best Loss: 1.147211
+EPOCH:: 28, Traininig Accuracy: 0.535131, Testing Accuracy: 0.219512
+EPOCH:: 29, Traininig Loss: 1.092928, Testing Loss: 1.314528, Best Loss: 1.147211
+EPOCH:: 29, Traininig Accuracy: 0.526144, Testing Accuracy: 0.371545
+EPOCH:: 30, Traininig Loss: 1.101717, Testing Loss: 1.479304, Best Loss: 1.147211
+EPOCH:: 30, Traininig Accuracy: 0.530637, Testing Accuracy: 0.261789
+EPOCH:: 31, Traininig Loss: 1.068970, Testing Loss: 1.460684, Best Loss: 1.147211
+EPOCH:: 31, Traininig Accuracy: 0.543505, Testing Accuracy: 0.335772
+EPOCH:: 32, Traininig Loss: 1.072615, Testing Loss: 1.713346, Best Loss: 1.147211
+EPOCH:: 32, Traininig Accuracy: 0.532884, Testing Accuracy: 0.234146
+EPOCH:: 33, Traininig Loss: 1.051487, Testing Loss: 1.513350, Best Loss: 1.147211
+EPOCH:: 33, Traininig Accuracy: 0.548203, Testing Accuracy: 0.269106
+EPOCH:: 34, Traininig Loss: 1.075264, Testing Loss: 1.259261, Best Loss: 1.147211
+EPOCH:: 34, Traininig Accuracy: 0.529412, Testing Accuracy: 0.378862
+EPOCH:: 35, Traininig Loss: 1.045245, Testing Loss: 2.069481, Best Loss: 1.147211
+EPOCH:: 35, Traininig Accuracy: 0.545956, Testing Accuracy: 0.215447
+EPOCH:: 36, Traininig Loss: 1.059951, Testing Loss: 1.308913, Best Loss: 1.147211
+EPOCH:: 36, Traininig Accuracy: 0.549020, Testing Accuracy: 0.392683
+EPOCH:: 37, Traininig Loss: 1.046897, Testing Loss: 1.197245, Best Loss: 1.147211
+EPOCH:: 37, Traininig Accuracy: 0.553513, Testing Accuracy: 0.512195
+EPOCH:: 38, Traininig Loss: 1.060615, Testing Loss: 1.221628, Best Loss: 1.147211
+EPOCH:: 38, Traininig Accuracy: 0.546364, Testing Accuracy: 0.389431
+EPOCH:: 39, Traininig Loss: 1.040836, Testing Loss: 1.232583, Best Loss: 1.147211
+EPOCH:: 39, Traininig Accuracy: 0.557394, Testing Accuracy: 0.334959
+EPOCH:: 40, Traininig Loss: 1.037163, Testing Loss: 1.494817, Best Loss: 1.147211
+EPOCH:: 40, Traininig Accuracy: 0.560253, Testing Accuracy: 0.244715
+EPOCH:: 41, Traininig Loss: 1.024096, Testing Loss: 1.752443, Best Loss: 1.147211
+EPOCH:: 41, Traininig Accuracy: 0.562908, Testing Accuracy: 0.223577
+EPOCH:: 42, Traininig Loss: 0.987831, Testing Loss: 1.171674, Best Loss: 1.147211
+EPOCH:: 42, Traininig Accuracy: 0.579248, Testing Accuracy: 0.428455
+EPOCH:: 43, Traininig Loss: 1.007949, Testing Loss: 1.228666, Best Loss: 1.147211
+EPOCH:: 43, Traininig Accuracy: 0.570261, Testing Accuracy: 0.442276
+EPOCH:: 44, Traininig Loss: 0.972671, Testing Loss: 1.324415, Best Loss: 1.147211
+EPOCH:: 44, Traininig Accuracy: 0.578431, Testing Accuracy: 0.300813
+EPOCH:: 45, Traininig Loss: 0.978707, Testing Loss: 1.711770, Best Loss: 1.147211
+EPOCH:: 45, Traininig Accuracy: 0.585376, Testing Accuracy: 0.252033
+EPOCH:: 46, Traininig Loss: 1.022904, Testing Loss: 1.848514, Best Loss: 1.147211
+EPOCH:: 46, Traininig Accuracy: 0.564542, Testing Accuracy: 0.209756
+EPOCH:: 47, Traininig Loss: 0.998100, Testing Loss: 1.567259, Best Loss: 1.147211
+EPOCH:: 47, Traininig Accuracy: 0.572100, Testing Accuracy: 0.234146
+EPOCH:: 48, Traininig Loss: 0.967846, Testing Loss: 1.914093, Best Loss: 1.147211
+EPOCH:: 48, Traininig Accuracy: 0.591708, Testing Accuracy: 0.213008
+EPOCH:: 49, Traininig Loss: 0.967479, Testing Loss: 1.087601, Best Loss: 1.087601
+EPOCH:: 49, Traininig Accuracy: 0.597018, Testing Accuracy: 0.551220
+EPOCH:: 50, Traininig Loss: 0.987704, Testing Loss: 1.323529, Best Loss: 1.087601
+EPOCH:: 50, Traininig Accuracy: 0.574142, Testing Accuracy: 0.375610
+EPOCH:: 51, Traininig Loss: 0.975802, Testing Loss: 1.399351, Best Loss: 1.087601
+EPOCH:: 51, Traininig Accuracy: 0.579657, Testing Accuracy: 0.358537
+EPOCH:: 52, Traininig Loss: 0.930726, Testing Loss: 1.323633, Best Loss: 1.087601
+EPOCH:: 52, Traininig Accuracy: 0.607230, Testing Accuracy: 0.417886
+EPOCH:: 53, Traininig Loss: 0.972964, Testing Loss: 1.378740, Best Loss: 1.087601
+EPOCH:: 53, Traininig Accuracy: 0.583129, Testing Accuracy: 0.343902
+EPOCH:: 54, Traininig Loss: 0.944103, Testing Loss: 2.343322, Best Loss: 1.087601
+EPOCH:: 54, Traininig Accuracy: 0.604167, Testing Accuracy: 0.196748
+EPOCH:: 55, Traininig Loss: 0.961328, Testing Loss: 2.004619, Best Loss: 1.087601
+EPOCH:: 55, Traininig Accuracy: 0.586806, Testing Accuracy: 0.208943
+EPOCH:: 56, Traininig Loss: 0.958030, Testing Loss: 1.381860, Best Loss: 1.087601
+EPOCH:: 56, Traininig Accuracy: 0.589869, Testing Accuracy: 0.319512
+EPOCH:: 57, Traininig Loss: 0.952891, Testing Loss: 1.275521, Best Loss: 1.087601
+EPOCH:: 57, Traininig Accuracy: 0.597018, Testing Accuracy: 0.446341
+EPOCH:: 58, Traininig Loss: 0.953751, Testing Loss: 1.132512, Best Loss: 1.087601
+EPOCH:: 58, Traininig Accuracy: 0.592933, Testing Accuracy: 0.420325
+EPOCH:: 59, Traininig Loss: 0.921933, Testing Loss: 1.831706, Best Loss: 1.087601
+EPOCH:: 59, Traininig Accuracy: 0.613562, Testing Accuracy: 0.254472
+EPOCH:: 60, Traininig Loss: 0.935253, Testing Loss: 1.759772, Best Loss: 1.087601
+EPOCH:: 60, Traininig Accuracy: 0.606413, Testing Accuracy: 0.256098
+EPOCH:: 61, Traininig Loss: 0.950687, Testing Loss: 1.833916, Best Loss: 1.087601
+EPOCH:: 61, Traininig Accuracy: 0.596609, Testing Accuracy: 0.216260
+EPOCH:: 62, Traininig Loss: 0.958825, Testing Loss: 1.634220, Best Loss: 1.087601
+EPOCH:: 62, Traininig Accuracy: 0.598243, Testing Accuracy: 0.262602
+EPOCH:: 63, Traininig Loss: 0.930299, Testing Loss: 1.352893, Best Loss: 1.087601
+EPOCH:: 63, Traininig Accuracy: 0.603554, Testing Accuracy: 0.303252
+EPOCH:: 64, Traininig Loss: 0.908024, Testing Loss: 1.556958, Best Loss: 1.087601
+EPOCH:: 64, Traininig Accuracy: 0.619281, Testing Accuracy: 0.323577
+EPOCH:: 65, Traininig Loss: 0.940070, Testing Loss: 1.982469, Best Loss: 1.087601
+EPOCH:: 65, Traininig Accuracy: 0.602124, Testing Accuracy: 0.226829
+EPOCH:: 66, Traininig Loss: 0.924351, Testing Loss: 1.491775, Best Loss: 1.087601
+EPOCH:: 66, Traininig Accuracy: 0.613766, Testing Accuracy: 0.275610
+EPOCH:: 67, Traininig Loss: 0.921454, Testing Loss: 1.855114, Best Loss: 1.087601
+EPOCH:: 67, Traininig Accuracy: 0.609273, Testing Accuracy: 0.204878
+EPOCH:: 68, Traininig Loss: 0.920650, Testing Loss: 1.506689, Best Loss: 1.087601
+EPOCH:: 68, Traininig Accuracy: 0.601103, Testing Accuracy: 0.263415
+EPOCH:: 69, Traininig Loss: 0.904952, Testing Loss: 1.288729, Best Loss: 1.087601
+EPOCH:: 69, Traininig Accuracy: 0.620915, Testing Accuracy: 0.339837
+EPOCH:: 70, Traininig Loss: 0.894789, Testing Loss: 1.237157, Best Loss: 1.087601
+EPOCH:: 70, Traininig Accuracy: 0.623979, Testing Accuracy: 0.417073
