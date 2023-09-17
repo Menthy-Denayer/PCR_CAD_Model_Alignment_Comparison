@@ -82,7 +82,7 @@ def apply_transformation(template_pointcloud, source_pointcloud, transformation_
     return
 
 
-def visualise_ground_truth(gt_json_file, voxel_size = 0):
+def visualise_ground_truth(gt_json_file, voxel_size = 0, zero_mean = False):
     """
     Visualize ground truth transformation from .json file
     
@@ -93,13 +93,13 @@ def visualise_ground_truth(gt_json_file, voxel_size = 0):
     """
     
     template_pointcloud, source_pointcloud, transformation,_ = \
-        preprocess_data(gt_json_file, voxel_size)
+        preprocess_data(gt_json_file, voxel_size, zero_mean)
 
     apply_transformation(source_pointcloud, template_pointcloud, transformation[0])
     
     return
 
-def visualise_result(json_file, voxel_size = None):
+def visualise_result(json_file, voxel_size = 0):
     """
     Visualize registration result from .json file
     
@@ -108,20 +108,12 @@ def visualise_result(json_file, voxel_size = None):
     json_file               : string                : path to result .json file
     voxel_size              : float                 : down sample point cloud
     """
-    
-    # Read data
-    registration_parameters = read_json(json_file, "registration_parameters")
-    
-    if(not voxel_size):
-        if(voxel_size != 0):
-            voxel_size = registration_parameters["voxel_size"]
-        
-    zero_mean = registration_parameters["centered"]
-    transformation = read_json(json_file,"estimated_transformation")
-    
+       
     # Load data as point clouds
-    template_pointcloud, source_pointcloud,_,_ = \
-        preprocess_data(json_file, voxel_size, zero_mean)
+    template_pointcloud, source_pointcloud,_,json_info = \
+        preprocess_data(json_file, voxel_size)
+        
+    transformation = json_info["estimated_transformation"]
 
     apply_transformation(template_pointcloud, source_pointcloud, transformation)
     

@@ -7,7 +7,7 @@
 
 run experiment
 
-Runs single experiment
+Run registration experiments
 
 Inputs:
     - Object name
@@ -27,7 +27,10 @@ Output:
 =============================================================================
 """
 
-from .data_manager import preprocess_data, pointcloud_to_torch, write_result_json, read_json
+from .data_manager import preprocess_data, pointcloud_to_torch, save_result, read_json
+import os
+from tqdm import tqdm
+import open3d as o3d
 
 """
 =============================================================================
@@ -44,7 +47,7 @@ torch_methods ={"GO-ICP", "PointNetLK", "RPMNet", "ROPNet"}
 """
 
 
-def run_method(template, source, pcr_method, MSEThresh, trimFraction, voxel_size):
+def run_method(template, source, pcr_method, MSEThresh, trimFraction, voxel_size, zero_mean):
     """
     Run registration with chosen method
     
@@ -63,7 +66,9 @@ def run_method(template, source, pcr_method, MSEThresh, trimFraction, voxel_size
     registration_time       : float                     : computation time for registration
     """
     
-    registration_parameters = {"method": pcr_method}
+    registration_parameters = {"method": pcr_method,
+                               "voxel_size" : voxel_size,
+                               "centered" : zero_mean}
     
     if pcr_method in torch_methods:
         source_tensor = pointcloud_to_torch(source)
@@ -126,7 +131,7 @@ def run_method(template, source, pcr_method, MSEThresh, trimFraction, voxel_size
 
 def run_one_experiment(gt_json_file, pcr_method, voxel_size = 0, zero_mean = False,
                        MSEThresh=0.00001, trimFraction=0.0001, 
-                       experiment_name = "experiment"):
+                       experiment_name = "experiment", suffix = ""):
     """
     Run a single registration experiment
     
@@ -142,23 +147,20 @@ def run_one_experiment(gt_json_file, pcr_method, voxel_size = 0, zero_mean = Fal
     """
     
     # Load point clouds
-    template_pointcloud, source_pointcloud, transformation, json_info = \
+    template_pointcloud, source_pointcloud, _, json_info = \
         preprocess_data(gt_json_file, voxel_size, zero_mean)
     
     # Run method
     estimated_transformation, registration_time, registration_parameters = \
         run_method(template_pointcloud, source_pointcloud, pcr_method,
-                   MSEThresh, trimFraction, voxel_size)
-    
-    # Add specific registration parameters
-    registration_parameters["voxel_size"] = voxel_size
-    registration_parameters["centered"] = zero_mean
-    json_info["registration_parameters"] = registration_parameters
+                   MSEThresh, trimFraction, voxel_size, zero_mean)
     
     # Save result
-    output_folder = pcr_method + "/" + experiment_name
-    write_result_json(output_folder, transformation, estimated_transformation, 
-                      registration_time, json_info)
+    file_name = gt_json_file.split('/')[-1].split('.json')[0] + suffix
+    experiment_name = pcr_method + "/" + experiment_name
+    
+    save_result(file_name, experiment_name, estimated_transformation, 
+                      registration_time, json_info, registration_parameters)
     return
 
 def run_refinement(json_file, voxel_size = 0, experiment_name = "refinement"):
@@ -177,28 +179,52 @@ def run_refinement(json_file, voxel_size = 0, experiment_name = "refinement"):
     # Read data from previous registration step
     json_info = read_json(json_file)
     registration_parameters = json_info["registration_parameters"]
-    zero_mean = registration_parameters["centered"]
-    ground_truth = json_info["transformation"]
     transformation = json_info["estimated_transformation"]
     initial_pcr_method = registration_parameters["method"]
     
     # Load data as point clouds
     # Voxel size at 0 since refinement works on original point clouds
-    template_pointcloud, source_pointcloud,_,_ = \
-        preprocess_data(json_file, voxel_size = 0, zero_mean = zero_mean)
+    template_pointcloud, source_pointcloud, _, json_info = \
+        preprocess_data(json_file, voxel_size = 0)
     
     # Run method
     estimated_transformation, registration_time = \
         ICP.main(source_pointcloud, template_pointcloud, voxel_size, transformation)
     
     # Add specific registration parameters
-    registration_parameters = {"method" : "ICP refinement"}
+    registration_parameters["method"] = "ICP refinement"
     registration_parameters["voxel_size"] = voxel_size
-    registration_parameters["centered"] = zero_mean
-    json_info["registration_parameters"] = registration_parameters
     
     # Save result
-    output_folder = initial_pcr_method + "_refined/" + experiment_name
-    write_result_json(output_folder, ground_truth, estimated_transformation, 
-                      registration_time, json_info)
+    file_name = json_file.split('/')[-1].split('_result.json')[0]
+    experiment_name = initial_pcr_method + "_refined/" + experiment_name
+    save_result(file_name, experiment_name, estimated_transformation, 
+                      registration_time, json_info, registration_parameters)
+    return
+
+def run_experiment_batch(json_dir, pcr_method, voxel_size = 0, zero_mean = False,
+                       MSEThresh=0.00001, trimFraction=0.0001, 
+                       experiment_name = "experiment", nmb_it = 1):
+    
+    for _,json_file in enumerate(tqdm(os.listdir(json_dir))):
+        
+        json_path = json_dir + "/" + json_file
+        
+        for it in range(nmb_it):
+            
+            suffix = "_it_" + str(it+1)
+            
+            run_one_experiment(json_path, pcr_method, voxel_size, zero_mean,
+                               MSEThresh, trimFraction, experiment_name, suffix)
+    
+    return
+
+def run_refinement_batch(json_dir, voxel_size = 0, experiment_name = "refinement"):
+    
+    for _,json_file in enumerate(tqdm(os.listdir(json_dir))):
+        
+        json_path = json_dir + "/" + json_file
+        
+        run_refinement(json_path, voxel_size, experiment_name)
+    
     return
