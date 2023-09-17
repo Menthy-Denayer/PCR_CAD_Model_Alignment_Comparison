@@ -7,7 +7,8 @@ GitHub page aimed at comparing Point Cloud Registration (PCR) techniques when pe
 2. Install the required packages to run the registration methods
 3. Use the main.py file to:
   -  Visualize the ground truth transformation
+  -  Assess the quality of the ground truth estimation using ICP refinement
   -  Compute the result of applying any registration method included
   -  Visualize the result of the registration
   -  Refine the registration using ICP
-  -  Compute metrics to assess the registration performance (TBC)
+  -  Compute metrics to assess the registration performance 
