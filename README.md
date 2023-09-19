@@ -14,7 +14,7 @@ GitHub page aimed at comparing Point Cloud Registration (PCR) techniques when pe
   -  Compute metrics to assess the registration performance 
 
 # Packages
-A list of required Python packages is provided in the _packages.txt_ file. 
+TO DO: A list of required Python packages is provided in the _packages.txt_ file. 
 
 For the registration methods (GO-ICP, RPMNet, PointNetLK & ROPNet), the packages can be found on the author's source code page.
 
@@ -24,3 +24,8 @@ Many thanks to the authors of the used registration methods!
 - [GO-ICP](https://github.com/aalavandhaann/go-icp_cython.git)
 - [Learning3D](https://github.com/vinits5/learning3d.git) (PointNetLK, RPMNet)
 - [ROPNet](https://github.com/zhulf0804/ROPNet.git)
+
+# Project Status
+[x] Added primary source code
+[x] Added used datasets
+[ ] Add list of required packages to run created source code
