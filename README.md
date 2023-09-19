@@ -20,7 +20,7 @@ For the registration methods (GO-ICP, RPMNet, PointNetLK & ROPNet), the packages
 
 # Acknowledgements 
 Many thanks to the authors of the used registration methods!
--[Open3D](http://www.open3d.org/) (RANSAC, ICP, FGR)
-- [GO-ICP]([https://www.google.com](https://github.com/aalavandhaann/go-icp_cython.git)https://github.com/aalavandhaann/go-icp_cython.git)
+- [Open3D](http://www.open3d.org/) (RANSAC, ICP, FGR)
+- [GO-ICP]([https://www.google.com](https://github.com/aalavandhaann/go-icp_cython.git)
 - [Learning3D](https://github.com/vinits5/learning3d.git) (PointNetLK, RPMNet)
 - [ROPNet](https://github.com/zhulf0804/ROPNet.git)
