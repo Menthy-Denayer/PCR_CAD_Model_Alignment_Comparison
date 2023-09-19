@@ -26,6 +26,6 @@ Many thanks to the authors of the used registration methods!
 - [ROPNet](https://github.com/zhulf0804/ROPNet.git)
 
 # Project Status
-[x] Added primary source code
-[x] Added used datasets
-[ ] Add list of required packages to run created source code
+- [x] Added primary source code
+- [x] Added used datasets
+- [ ] Add list of required packages to run created source code
