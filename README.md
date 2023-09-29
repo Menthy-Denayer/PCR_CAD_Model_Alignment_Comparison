@@ -14,7 +14,7 @@ GitHub page aimed at comparing Point Cloud Registration (PCR) techniques when pe
   -  Compute metrics to assess the registration performance 
 
 # Packages
-TO DO: A list of required Python packages is provided in the _packages.txt_ file. 
+A list of required Python packages is provided in the _packages.txt_ file. Packages to run the main code are: PyTorch, Open3D, tqdm (progress-bar), tabulate (errors summary), (Spyder-kernels)
 
 For the registration methods (GO-ICP, RPMNet, PointNetLK & ROPNet), the packages can be found on the author's source code page.
 
