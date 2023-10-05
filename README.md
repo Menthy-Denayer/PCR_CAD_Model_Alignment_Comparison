@@ -28,4 +28,4 @@ Many thanks to the authors of the used registration methods!
 # Project Status
 - [x] Added primary source code
 - [x] Added used datasets
-- [ ] Add list of required packages to run created source code
+- [x] Add list of required packages to run created source code
